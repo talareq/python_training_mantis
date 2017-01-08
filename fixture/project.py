@@ -43,8 +43,9 @@ class ProjectHelper:
             name = cells[0].text
             description = cells[1].text
             href = wd.find_element_by_css_selector("a").get_attribute("href")
+            id = href[href.rfind('=') + 1:]
             self.project_cache.append(Project(name=name, description=description,
-                                                  id=href))
+                                                  id=id))
         return list(self.project_cache)
 
 
@@ -55,7 +56,7 @@ class ProjectHelper:
             self.app.open_home_page()
         self.open_project_manage(wd)
         # open deletion
-        wd.find_element_by_css_selector("a[href='manage_proj_edit_page.php?project_id='%s']" % id).click()
+        wd.find_element_by_css_selector("a[href='manage_proj_edit_page.php?project_id=%s']" % id).click()
         # submit deletion
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
