@@ -18,7 +18,7 @@
       <file leaf-file-name="contact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../homework3/fixture/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
+            <state relative-caret-position="1327">
               <caret line="159" column="31" lean-forward="true" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -30,8 +30,8 @@
       <file leaf-file-name="project.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/project.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="47" selection-end-column="57" />
+            <state relative-caret-position="340">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,6 +71,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="conn_check.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/conn_check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="python.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/_pytest/python.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,16 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="del" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/del">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -238,7 +238,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.py.test in delete_project.py">
+  <component name="RunManager" selected="Python tests.py.test in conn_check.py">
     <configuration default="false" name="py.test in add_new_project.py" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -488,11 +488,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in delete_project.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in conn_check.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_add_new_contact" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in add_new_project.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python.chech_db_connection" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in conn_check.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.chech_db_connection" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in delete_project.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_add_new_contact" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in add_new_project.py" />
       </list>
     </recent_temporary>
   </component>
@@ -522,11 +522,11 @@
     <history-entry file="py_test_in_conn_check_py - 2017.01.08 at 14h 16m 30s.xml">
       <configuration name="py.test in conn_check.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_delete_project_py - 2017.01.08 at 13h 42m 56s.xml">
-      <configuration name="py.test in delete_project.py" configurationId="tests" />
+    <history-entry file="py_test_in_conn_check_py - 2017.01.08 at 14h 50m 14s.xml">
+      <configuration name="py.test in conn_check.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_delete_project_py - 2017.01.08 at 13h 43m 38s.xml">
-      <configuration name="py.test in delete_project.py" configurationId="tests" />
+    <history-entry file="py_test_in_conn_check_py - 2017.01.08 at 14h 52m 23s.xml">
+      <configuration name="py.test in conn_check.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_delete_project_py - 2017.01.08 at 13h 48m 02s.xml">
       <configuration name="py.test in delete_project.py" configurationId="tests" />
@@ -872,14 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/conn_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/del">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -940,16 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../homework3/fixture/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="159" column="31" lean-forward="true" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/delete_project.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -960,10 +942,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/conn_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../homework3/fixture/contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1327">
+          <caret line="159" column="31" lean-forward="true" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/project.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="47" selection-end-column="57" />
+        <state relative-caret-position="340">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>

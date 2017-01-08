@@ -38,13 +38,13 @@ class ProjectHelper:
             self.app.open_home_page()
             self.project_cache = []
             self.open_project_manage(wd)
-            row = wd.find_element_by_css_selector('tr.row-1, tr.row-2')
-            cells = row.find_elements_by_tag_name("td")
-            name = cells[0].text
-            description = cells[1].text
-            href = wd.find_element_by_css_selector("a").get_attribute("href")
-            id = href[href.rfind('=') + 1:]
-            self.project_cache.append(Project(name=name, description=description,
+            for row in wd.find_elements_by_css_selector('tr.row-1, tr.row-2'):
+                cells = row.find_elements_by_tag_name("td")
+                name = cells[0].text
+                description = cells[1].text
+                href = wd.find_element_by_css_selector("a").get_attribute("href")
+                id = href[href.rfind('=') + 1:]
+                self.project_cache.append(Project(name=name, description=description,
                                                   id=id))
         return list(self.project_cache)
 
