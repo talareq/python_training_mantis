@@ -8,7 +8,7 @@ class Project:
         self.id = id
 
     def __repr__(self):
-        return "%s:%s:%s:%s" % (self.id, self.name, self.descritpion)
+        return "%s:%s:%s" % (self.id, self.name, self.descritpion)
 
 
     def __eq__(self, other):

@@ -38,11 +38,26 @@ class ProjectHelper:
             self.app.open_home_page()
             self.project_cache = []
             self.open_project_manage(wd)
-            row = wd.find_element_by_css_selector('tr[@class="row-1"]')
+            row = wd.find_element_by_css_selector('tr.row-1, tr.row-2')
             cells = row.find_elements_by_tag_name("td")
             name = cells[0].text
             description = cells[1].text
-            id = wd.find_element_by_css_selector("a href[manage_proj_edit_page.php?project_id='%s']" % id)
+            href = wd.find_element_by_css_selector("a").get_attribute("href")
             self.project_cache.append(Project(name=name, description=description,
-                                                  id=id))
-            return list(self.project_cache)
+                                                  id=href))
+        return list(self.project_cache)
+
+
+
+    def del_project(self, id):
+        wd = self.app.wd
+        if not len(wd.find_elements_by_name("searchstring")) > 0:
+            self.app.open_home_page()
+        self.open_project_manage(wd)
+        # open deletion
+        wd.find_element_by_css_selector("a[href='manage_proj_edit_page.php?project_id='%s']" % id).click()
+        # submit deletion
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.app.open_home_page()
+        self.group_cache = None
