@@ -6,10 +6,11 @@ def test_del_project(app):
     assert app.session.is_logged_in_as("administrator")
     old_projects=app.project.get_project_list()
     if len(old_projects) == 0:
-        app.project.new_project()
+        app.project.new_project(Project(name="test", description="test"))
         old_projects=app.project.get_project_list()
+    return old_projects
     Project = random.choice(old_projects)
     app.project.del_project(Project.id)
     new_projects=app.project.get_project_list()
-    old_projects.append(Project)
+    old_projects.remove(Project)
     assert old_projects == new_projects

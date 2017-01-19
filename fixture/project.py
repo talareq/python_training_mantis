@@ -8,21 +8,28 @@ class ProjectHelper:
 
 
 
-    def new_project(self):
+    def new_project(self, project):
         wd = self.app.wd
         if not len(wd.find_elements_by_name("searchstring")) > 0:
             self.app.open_home_page()
         self.open_project_manage(wd)
         # add new project
         wd.find_element_by_xpath("//table[3]/tbody/tr[1]/td/form/input[2]").click()
-        wd.find_element_by_name("name").click()
-        wd.find_element_by_name("name").clear()
-        wd.find_element_by_name("name").send_keys("swistu")
-        wd.find_element_by_name("description").click()
-        wd.find_element_by_name("description").clear()
-        wd.find_element_by_name("description").send_keys("gwizdu")
+        self.fill_project_form(project)
         wd.find_element_by_css_selector("input.button").click()
         self.project_cache = None
+
+    def fill_project_form(self, project):
+        wd = self.app.wd
+        self.change_field_value("name", project.name)
+        self.change_field_value("description", project.description)
+
+    def change_field_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
 
 
     def open_project_manage(self, wd):
