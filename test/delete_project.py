@@ -6,13 +6,11 @@ def test_del_project(app):
     assert app.session.is_logged_in_as("administrator")
     username="administrator"
     password="root"
-    old_projects=app.soap.get_project_list(username, password)
-    if len(old_projects) == 0:
+    if list(app.soap.get_project_list(username, password)) == 0:
         app.project.new_project(Project(name="test", description="test"))
-        old_projects=app.soap.get_project_list(username, password)
-    return old_projects
-    Project = random.choice(old_projects)
-    app.project.del_project(Project.id)
+    old_projects=app.soap.get_project_list(username, password)
+    project = random.choice(old_projects)
+    app.project.del_project(project.id)
     new_projects=app.soap.get_project_list(username, password)
-    old_projects.remove(Project)
+    old_projects.remove(project)
     assert old_projects == new_projects

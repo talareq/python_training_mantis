@@ -16,5 +16,5 @@ def test_add_new_project(app, json_project):
         else:
             app.project.new_project(project)
             new_projects=app.soap.get_project_list(username, password)
-            old_projects.append(Project)
+            old_projects.append(project)
             assert old_projects == new_projects
